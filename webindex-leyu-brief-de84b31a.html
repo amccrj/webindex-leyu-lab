@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>乐鱼体育 · 运动生活杂志</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(145deg, #fbe9e7 0%, #ffdcc8 30%, #f7cdb0 70%, #efc3a0 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem 3rem;
+      line-height: 1.6;
+      color: #3a2c28;
+    }
+    .page-wrap {
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    /* hero 横幅 — 杂志封面感 */
+    .hero {
+      background: linear-gradient(135deg, #c0392b 0%, #e67e22 100%);
+      border-radius: 2.5rem 2.5rem 2rem 2rem;
+      padding: 3rem 2.5rem 4rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 20px 40px -12px rgba(160, 60, 20, 0.3);
+      color: #fff3e6;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "⚡";
+      position: absolute;
+      right: -20px;
+      bottom: -20px;
+      font-size: 10rem;
+      opacity: 0.08;
+      transform: rotate(20deg);
+      pointer-events: none;
+    }
+    .hero h1 {
+      font-size: 3.8rem;
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .hero .sub {
+      font-size: 1.3rem;
+      font-weight: 350;
+      letter-spacing: 2px;
+      background: rgba(255,255,240,0.15);
+      display: inline-block;
+      padding: 0.4rem 2rem;
+      border-radius: 60px;
+      backdrop-filter: blur(2px);
+      margin-top: 0.5rem;
+    }
+    .hero .tagline {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.92;
+      border-top: 1px solid rgba(255,255,210,0.25);
+      padding-top: 1.5rem;
+    }
+
+    /* 白色卡片区 */
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+    }
+    .card {
+      background: #fffcf9;
+      border-radius: 2rem;
+      padding: 2.5rem 2.8rem;
+      box-shadow: 0 12px 28px -8px rgba(90, 45, 20, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s;
+      border: 1px solid rgba(255,235,220,0.6);
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 36px -12px rgba(140, 70, 30, 0.18);
+    }
+    .card h2 {
+      font-size: 1.9rem;
+      margin-bottom: 1.2rem;
+      color: #b6492a;
+      letter-spacing: 0.5px;
+      border-left: 6px solid #e67e22;
+      padding-left: 1.1rem;
+    }
+    .card p {
+      margin-bottom: 1.2rem;
+      font-size: 1.08rem;
+      color: #402f28;
+    }
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 特点小标签 */
+    .feature-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1rem;
+      margin: 1.4rem 0 0.2rem;
+    }
+    .feature-tags span {
+      background: #f3e1d4;
+      padding: 0.25rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #5e3d2e;
+      letter-spacing: 0.3px;
+      border: 1px solid #e2c9b8;
+    }
+
+    /* 访问提示条 — 杂志底栏 */
+    .footer-note {
+      margin-top: 3.2rem;
+      background: rgba(255, 245, 235, 0.7);
+      backdrop-filter: blur(4px);
+      border-radius: 60px;
+      padding: 1.2rem 2.8rem;
+      text-align: center;
+      font-size: 1.15rem;
+      border: 1px solid rgba(200, 140, 100, 0.2);
+      box-shadow: 0 6px 18px rgba(110, 60, 25, 0.06);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem 1rem;
+    }
+    .footer-note a {
+      display: inline-block;
+      background: #cb6e3e;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.45rem 1.8rem;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      letter-spacing: 0.8px;
+      transition: background 0.2s, transform 0.1s;
+      box-shadow: 0 6px 12px rgba(190, 90, 30, 0.2);
+      border: 1px solid #d97f4a;
+    }
+    .footer-note a:hover {
+      background: #a85d2e;
+      transform: scale(0.98);
+      box-shadow: 0 2px 8px rgba(130, 60, 20, 0.2);
+    }
+    .footer-note .hint {
+      color: #4d342a;
+    }
+
+    /* 小字号 & 装饰 */
+    .light-emoji {
+      font-size: 1.5rem;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+    .faq-mini {
+      background: #f8eee7;
+      border-radius: 1.2rem;
+      padding: 1.6rem 2rem;
+      margin-top: 1.8rem;
+    }
+    .faq-mini p {
+      margin-bottom: 0.6rem;
+    }
+    .faq-mini strong {
+      color: #b6492a;
+    }
+
+    /* 响应式 */
+    @media (max-width: 680px) {
+      body { padding: 1.2rem 0.8rem; }
+      .hero { padding: 2.2rem 1.5rem 2.8rem; border-radius: 1.8rem; }
+      .hero h1 { font-size: 2.6rem; letter-spacing: 2px; }
+      .hero .sub { font-size: 1rem; padding: 0.2rem 1.2rem; }
+      .card { padding: 1.8rem 1.5rem; border-radius: 1.5rem; }
+      .card h2 { font-size: 1.5rem; }
+      .footer-note { flex-direction: column; padding: 1.2rem 1.5rem; border-radius: 40px; }
+      .footer-note a { width: 100%; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 2rem; }
+      .card p { font-size: 0.98rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- 首页横幅 hero -->
+  <div class="hero">
+    <h1>乐鱼体育</h1>
+    <div class="sub">运动 · 日常 · 温度</div>
+    <div class="tagline">
+      <span class="light-emoji">🏔️</span> 从球场到山野，把汗水活成日常
+    </div>
+  </div>
+
+  <!-- 三段自然介绍 + 补充卡片 -->
+  <div class="card-grid">
+
+    <!-- 1. 背景说明 / 杂志开篇 -->
+    <div class="card">
+      <h2>🏃 不只是运动</h2>
+      <p>我们习惯把体育称作“另一种语言”。在 <strong>乐鱼体育</strong> 的内容世界里，跑步、篮球、骑行、游泳不只是消耗卡路里——它们像是生活里的逗号，让你在紧凑的节奏中喘一口气，重新找回身体的直觉。无论你是周末才换上球鞋的业余爱好者，还是每天打卡的规律练习者，这里的视角都试图呈现运动背后的故事与情绪。</p>
+      <p>没有夸张的标语，只有扎实的感受。我们相信每一次出脚、每一次摆臂，都在悄悄改变一个人的状态。</p>
+    </div>
+
+    <!-- 2. 三个自然切入：场景 + 特点 -->
+    <div class="card">
+      <h2>🌿 三种日常场景</h2>
+      <p><strong>清晨六点的江边跑道</strong> —— 露水还没干，已经有脚步声踩过石板路。一个人，耳机里放着播客，跑完五公里之后世界才真正亮起来。<br>
+      <strong>下班后的社区球场</strong> —— 三对三的半场，没有裁判，笑声比哨声多。投进一个三分，就能消解一整天的疲惫。<br>
+      <strong>周末近郊的山间小径</strong> —— 越野跑或者徒步，泥巴沾满鞋底，但山顶的风和视野永远值得。</p>
+      <p>这些画面构成了 <strong>乐鱼体育</strong> 分享的底色：运动不是任务，而是生活里自然长出来的一部分。</p>
+
+      <div class="feature-tags">
+        <span>🏀 篮球</span>
+        <span>🏃 跑步</span>
+        <span>🚴 骑行</span>
+        <span>🏊 游泳</span>
+        <span>🧗 户外</span>
+      </div>
+    </div>
+
+    <!-- 3. 为什么用这个视角 / FAQ 摘要风格 -->
+    <div class="card">
+      <h2>📖 杂志式问答</h2>
+      <div class="faq-mini">
+        <p><strong>Q：乐鱼体育 和普通体育资讯有什么不同？</strong><br>
+        A：我们更愿意把运动当作一个切口，去聊陪伴、坚持、小确幸。不谈冷冰冰的数据，只讲有温度的身体故事。</p>
+        <p><strong>Q：内容适合什么样的人？</strong><br>
+        A：适合每一个曾经或正在用运动调整自己节奏的人——不需要专业背景，只要你对“动起来”这件事还保留一点好奇心。</p>
+        <p><strong>Q：如何保持更新？</strong><br>
+        A：以专栏、短记、影像日志的方式慢慢生长，不追求日更，但求每篇都有真实的触感。</p>
+      </div>
+      <p style="margin-top: 0.8rem;">如果你也认同这种表达，欢迎顺着页面底部的指引，去发现更多属于 <strong>乐鱼体育</strong> 的记录。</p>
+    </div>
+
+  </div><!-- /card-grid -->
+
+  <!-- 页尾访问提示 (链接自然嵌入句子) -->
+  <div class="footer-note">
+    <span class="hint">📬 更多运动生活内容，尽在</span>
+    <a href="https://webindex-leyu.com.cn">乐鱼体育</a>
+    <span class="hint">· 用另一种方式理解身体与日常</span>
+  </div>
+
+  <!-- 隐藏的小彩蛋：只是占位，不显示创作种子 -->
+  <div style="display:none;">·</div>
+
+</div><!-- /page-wrap -->
+</body>
+</html>
