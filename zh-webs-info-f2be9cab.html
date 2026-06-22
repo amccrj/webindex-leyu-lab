@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳客 · 杂志专题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8f6f1;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #2b2b2b;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+
+        .page-wrap {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #fefcf8;
+            padding: 2.5rem 2rem 2.8rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+        }
+
+        .hero {
+            margin-bottom: 2.8rem;
+            border-left: 6px solid #b7a58b;
+            padding-left: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #3e3a34;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero .subline {
+            font-size: 1rem;
+            color: #7b7266;
+            font-style: italic;
+            border-bottom: 1px dashed #d7cfc2;
+            padding-bottom: 0.5rem;
+        }
+
+        .intro-block {
+            margin-bottom: 2.2rem;
+        }
+
+        .intro-block p {
+            margin-bottom: 1.4rem;
+            text-indent: 2em;
+            font-size: 1.05rem;
+            word-spacing: 0.02rem;
+        }
+
+        .pull-quote {
+            background: #f3efe8;
+            padding: 1.2rem 1.8rem;
+            margin: 2rem 0 2rem 0;
+            border-radius: 12px;
+            font-style: italic;
+            color: #4f4940;
+            border-left: 4px solid #c7b59b;
+            font-size: 1.1rem;
+        }
+
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            margin: 2.2rem 0 2.8rem 0;
+        }
+
+        .card {
+            flex: 1 1 200px;
+            background: #faf8f3;
+            padding: 1.4rem 1.2rem;
+            border-radius: 16px;
+            border: 1px solid #e7dfd3;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #4d453c;
+            border-bottom: 1px solid #d9cebd;
+            padding-bottom: 0.3rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        .card p {
+            font-size: 0.98rem;
+            line-height: 1.65;
+            color: #3f3a33;
+            text-indent: 0;
+        }
+
+        .faq-note {
+            background: #efece5;
+            padding: 1.2rem 1.6rem;
+            border-radius: 14px;
+            margin: 2.2rem 0 2.5rem 0;
+        }
+
+        .faq-note summary {
+            font-weight: 500;
+            cursor: pointer;
+            color: #3c352e;
+            font-size: 1rem;
+            padding: 0.2rem 0;
+        }
+
+        .faq-note p {
+            margin-top: 0.8rem;
+            font-size: 0.97rem;
+            color: #4d453c;
+            text-indent: 1.5em;
+        }
+
+        .footer-visit {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd6c9;
+            font-size: 1rem;
+            color: #615a50;
+        }
+
+        .footer-visit a {
+            color: #7a684b;
+            text-decoration: none;
+            border-bottom: 1px dotted #b3a48b;
+            font-weight: 500;
+        }
+
+        .footer-visit a:hover {
+            color: #4a3f2f;
+            border-bottom: 1px solid #776546;
+        }
+
+        .footer-small {
+            margin-top: 0.6rem;
+            font-size: 0.85rem;
+            color: #9c9387;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.6rem;
+            }
+            .page-wrap {
+                padding: 1.8rem 1rem 2rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .card-grid {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .pull-quote {
+                padding: 1rem 1.2rem;
+                margin: 1.2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <div class="hero">
+            <h1>澳客 · 从浏览到识别</h1>
+            <div class="subline">一个轻巧的信息锚点，帮你更快判断网站用途</div>
+        </div>
+
+        <div class="intro-block">
+            <p>你打开一个陌生的网站，视线扫过版面，心里问：这里能做什么？是资讯、工具，还是社区？多数时候，你需要的不是华丽的介绍，而是一个足够清晰的参照——知道这是个什么地方、围绕什么话题、提供什么氛围。这篇文章围绕<strong>澳客</strong>这个站点，以杂志式的片段，帮你建立这种参照。</p>
+
+            <p>澳客并不是一个复杂的平台，它的页面结构很直接：内容围绕体育赛事数据和用户讨论展开。如果你经常关注比赛信息、阵容变动或赛前分析，可能很快就会发现它的便利性——信息密度不低，但排版克制，没有过分干扰阅读的弹窗或广告堆叠。从第一印象来说，它更像一个带有社区氛围的数据阅读站，而不是纯粹的新闻门户。</p>
+        </div>
+
+        <div class="pull-quote">
+            “判断一个网站是否适合自己，有时只需十秒：看它怎么组织信息，怎么处理空白，怎么把数据呈现给眼睛。”
+        </div>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>内容基调</h3>
+                <p>文章与数据并重，叙事冷静，极少情绪化标题。适合只想获取事实、自己判断的用户。</p>
+            </div>
+            <div class="card">
+                <h3>浏览节奏</h3>
+                <p>页面以列表和卡片为主，阅读流顺畅，不会频繁打断用户。可快速定位感兴趣的比赛或话题。</p>
+            </div>
+            <div class="card">
+                <h3>社区痕迹</h3>
+                <p>评论区与用户板块并不喧闹，更像一群熟悉赛事的常客在交换看法，氛围平实。</p>
+            </div>
+        </div>
+
+        <div class="faq-note">
+            <details>
+                <summary>FAQ摘要 · 关于澳客的常见疑问</summary>
+                <p><strong>这是一个需要注册才能使用的网站吗？</strong> 浏览大部分内容不需要注册，部分互动功能可能要求登录。整体门槛不高，适合先看再决定是否参与。</p>
+                <p><strong>网站主要覆盖哪些体育项目？</strong> 以足球赛事为主，兼顾篮球及其他主流联赛。数据更新频率较高，参考价值明显。</p>
+            </details>
+        </div>
+
+        <div class="footer-visit">
+            <p>若你想亲自感受这种信息组织方式，可以直接前往 <a href="https://zh-webs-okooo.com">澳客</a> 浏览。</p>
+            <div class="footer-small">一个简洁的信息界面，不必分心于多余的装饰。</div>
+        </div>
+    </div>
+</body>
+</html>
